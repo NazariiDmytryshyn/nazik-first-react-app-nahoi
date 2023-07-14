@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import nazik from "./image0.jpeg";
+import "./App.css";
 
-function App() {
+const App: React.FC = (): JSX.Element => {
+  const [counter, setCounter] = useState(0);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={nazik} className="Pizda-logo" alt="nazik" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          hello i am the developer from ternopil. my salary is 1400$ please
+          message me. i will made the same landing form your business. if you
+          have a question about my skills. please look at this:
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={() => setCounter((prev) => prev + 1)}>increase</button>
+        <div style={{ width: "50px" }}>{counter}</div>
       </header>
     </div>
   );
-}
+};
 
 export default App;
